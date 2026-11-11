@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>로그인 | Sunny</title>
+<link rel="icon" type="image/svg+xml" href="images/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-auth="login">
+<div id="site-header"></div>
+<main class="auth-wrap"><div class="auth-box"><img class="mascot" src="images/mascot.png" alt="" aria-hidden="true">
+<h1>다시 만나서 반가워요 🍊</h1><p>로그인하고 주문 내역과 수강 신청을 확인하세요.</p>
+<div class="mode-note" id="modeNote" hidden></div><div class="msg" id="aMsg"></div>
+<form id="aForm"><div class="field"><label for="em">이메일</label><input id="em" name="email" type="email" autocomplete="email" required></div>
+<div class="field"><label for="pw">비밀번호</label><input id="pw" name="pw" type="password" autocomplete="current-password" required></div>
+<button class="btn block" type="submit">로그인</button></form>
+<div class="hr">또는</div><button class="btn white block" id="gBtn" type="button">Google로 계속하기</button>
+<p class="alt"><a href="#" id="forgot">비밀번호를 잊으셨나요?</a></p>
+<p class="alt">아직 회원이 아니신가요? <a href="signup.html">회원가입</a></p>
+</div></main>
+<script src="js/firebase-config.js"></script>
+<script src="js/data.js"></script>
+<script src="js/db.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

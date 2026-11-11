@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>회원가입 | Sunny</title>
+<link rel="icon" type="image/svg+xml" href="images/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-auth="signup">
+<div id="site-header"></div>
+<main class="auth-wrap"><div class="auth-box"><img class="mascot" src="images/mascot.png" alt="" aria-hidden="true">
+<h1>Sunny 가족이 되어주세요 🌱</h1><p>가입하면 주문·수강 신청을 편하게 관리할 수 있어요.</p>
+<div class="mode-note" id="modeNote" hidden></div><div class="msg" id="aMsg"></div>
+<form id="aForm"><div class="field"><label for="nm">이름(닉네임)</label><input id="nm" name="name" autocomplete="nickname" required maxlength="20"></div>
+<div class="field"><label for="em">이메일</label><input id="em" name="email" type="email" autocomplete="email" required></div>
+<div class="two"><div class="field"><label for="pw">비밀번호 (6자 이상)</label><input id="pw" name="pw" type="password" autocomplete="new-password" minlength="6" required></div>
+<div class="field"><label for="pw2">비밀번호 확인</label><input id="pw2" name="pw2" type="password" autocomplete="new-password" required></div></div>
+<label class="chk" style="font-size:14px"><input type="checkbox" required> &nbsp;이용약관 및 개인정보 수집·이용에 동의합니다. (필수)</label>
+<button class="btn block" type="submit">가입하기</button></form>
+<div class="hr">또는</div><button class="btn white block" id="gBtn" type="button">Google로 계속하기</button>
+<p class="alt">이미 회원이신가요? <a href="login.html">로그인</a></p>
+</div></main>
+<script src="js/firebase-config.js"></script>
+<script src="js/data.js"></script>
+<script src="js/db.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

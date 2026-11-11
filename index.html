@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sunny — 귀여움으로 마음을 잇는 이모티콘 브랜드</title>
+<meta name="description" content="이모티콘 작가 Sunny의 공식 홈페이지. 브랜드 이모티콘 제작, 캐릭터 굿즈 스토어, 강연·교육 협업, 연락처.">
+<meta property="og:title" content="Sunny — 귀여움으로 마음을 잇는 이모티콘 브랜드">
+<meta property="og:image" content="images/hero/set-green.jpg">
+<link rel="icon" type="image/svg+xml" href="images/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<!-- ① 메인 슬라이드 -->
+<section class="hero" id="top" aria-roledescription="carousel" aria-label="Sunny 메인 슬라이드">
+  <div class="hero-track" id="heroTrack"></div>
+  <div class="hero-ctrl">
+    <button class="arrow" id="hPrev" aria-label="이전"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <div class="dots" id="heroDots"></div>
+    <button class="arrow" id="hNext" aria-label="다음"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+  <div class="hero-peek" id="heroCount">1 / 6</div>
+  <img class="mascot-run" src="images/mascot.png" alt="" aria-hidden="true">
+</section>
+
+<main>
+<!-- ② 브랜드 소개 -->
+<section class="sec" id="brand">
+  <div class="wrap">
+    <div class="brand-grid">
+      <div class="brand-art rv">
+        <div class="blob"><img class="ph" src="images/hero/tote-plush.jpg" alt="Sunny 굿즈 — 쿠션 인형, 에코백, 스티커" loading="lazy"></div>
+        <img class="mascot" src="images/mascot.png" alt="" aria-hidden="true">
+        <svg class="orange" viewBox="0 0 60 70" aria-hidden="true"><path d="M30 20c0-8 2-12 6-15" stroke="#211f1d" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M33 12c6-8 16-6 20-4-2 8-12 12-20 4z" fill="#5dae7a" stroke="#211f1d" stroke-width="3" stroke-linejoin="round"/><circle cx="30" cy="42" r="22" fill="#f5c75b" stroke="#211f1d" stroke-width="3"/><circle cx="26" cy="38" r="2" fill="#211f1d"/><circle cx="34" cy="38" r="2" fill="#211f1d"/><circle cx="30" cy="45" r="2" fill="#211f1d"/></svg>
+      </div>
+      <div class="brand-txt rv">
+        <span class="eyebrow">🍊 브랜드 소개</span>
+        <h2 id="brandTitle">귀여움 한 스푼으로, 오늘을 맑게</h2>
+        <div id="brandBody"></div>
+        <div class="values">
+          <div class="value"><i>🍊</i><h4>따뜻한 귀여움</h4><p>보는 순간 웃음이 나는 캐릭터</p></div>
+          <div class="value"><i>🌱</i><h4>함께 자라는 창작</h4><p>배우고 나누며 커지는 즐거움</p></div>
+          <div class="value"><i>💌</i><h4>마음을 잇는 소통</h4><p>대화를 부드럽게 하는 이모티콘</p></div>
+        </div>
+        <a class="btn" href="page.html?id=4-1">작가 Sunny 이야기 →</a>
+        <a class="btn white" href="page.html?id=4-2" style="margin-left:6px">대표 캐릭터·세계관</a>
+      </div>
+    </div>
+    <div class="svc-row">
+      <a class="svc rv" href="page.html?id=1-1"><span class="n">1-1</span><h4>제작 서비스 소개</h4><p>브랜드를 닮은 이모티콘을 기획부터 출시까지.</p></a>
+      <a class="svc rv" href="page.html?id=1-2"><span class="n">1-2</span><h4>브랜드 맞춤 패키지</h4><p>목적과 예산에 맞춰 고르는 제작 패키지.</p></a>
+      <a class="svc rv" href="page.html?id=1-4"><span class="n">1-4</span><h4>캐릭터 개발·리뉴얼</h4><p>새 캐릭터 개발부터 기존 캐릭터 리뉴얼까지.</p></a>
+      <a class="svc rv" href="page.html?id=1-7"><span class="n">1-7</span><h4>제작 상담·견적 신청</h4><p>간단히 남겨주시면 빠르게 연락드려요.</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- ③ 스토어 (핵심) -->
+<section class="sec" id="store">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="eyebrow">🛍️ Sunny Store</span><h2>오늘의 귀여움, 스토어에서 만나요</h2><p>인형·키링·파우치·문구부터 디지털 스티커, 전자책과 VOD까지. 서니와 함께할 아이템을 골라보세요.</p></div>
+    <div class="cat-tabs rv" id="catTabs" role="tablist"></div>
+    <div class="showcase rv" id="showcase" aria-roledescription="carousel" aria-label="추천 상품 슬라이드">
+      <div class="sc-track" id="scTrack"></div>
+      <div class="sc-nav"><button class="arrow" id="sPrev" aria-label="이전 상품"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button><span class="sc-count" id="scCount">1 / 1</span><button class="arrow" id="sNext" aria-label="다음 상품"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button></div>
+      <div class="sc-bar" id="scBar"></div>
+    </div>
+    <div class="marquee-title rv"><h3>🧺 전체 상품 둘러보기</h3><a class="btn sm white" href="page.html?id=3-7">기획전·구매 안내 →</a></div>
+    <div class="rail" id="rail" tabindex="0" aria-label="상품 목록 (좌우로 스크롤)"></div>
+    <div class="perks rv">
+      <div class="perk"><b>🚚 무료배송</b>3만 원 이상 구매 시</div>
+      <div class="perk"><b>🎁 선물 포장</b>요청사항에 남겨주세요</div>
+      <div class="perk"><b>📩 디지털 상품</b>결제 확인 후 즉시 안내</div>
+      <div class="perk"><b>💬 고객지원</b>상품·수강 문의 5-6</div>
+    </div>
+  </div>
+</section>
+
+<!-- ④ 강연 -->
+<section class="sec" id="lecture">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="eyebrow">🎤 강연·교육협업</span><h2>그리는 즐거움, 함께 나눠요</h2><p>기업·기관 특강부터 이모티콘 작가 클래스, 공동 강의와 지역 클래스까지.</p></div>
+    <div class="lec-grid">
+      <a class="lec rv" href="page.html?id=2-2"><i>🏢</i><h4>기업·기관 맞춤 특강</h4><p>조직의 이야기를 캐릭터와 이모티콘으로 풀어내는 특강.</p></a>
+      <a class="lec rv" href="page.html?id=2-3"><i>✏️</i><h4>이모티콘 작가 클래스</h4><p>기획·그리기·제안·출시까지 단계별로 배우는 클래스.</p></a>
+      <a class="lec rv" href="page.html?id=2-4"><i>🤝</i><h4>공동 강의·협업 제안</h4><p>플랫폼·학원·커뮤니티와 함께 만드는 강의.</p></a>
+      <a class="lec rv" href="page.html?id=2-5"><i>🏘️</i><h4>교육 위탁·지역 클래스</h4><p>도서관·센터·학교로 찾아가는 맞춤 클래스.</p></a>
+    </div>
+    <div class="sched rv">
+      <h3>📅 교육 일정 <a class="btn sm" href="page.html?id=2-7">수강·출강 신청</a></h3>
+      <div class="sched-list" id="schedList"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑤ 연락처 -->
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="eyebrow">💌 연락하기</span><h2>언제든 편하게 말 걸어주세요</h2><p>협업, 라이선싱, 행사, 취재, 고객지원까지 — 목적에 맞는 창구를 골라주세요.</p></div>
+    <div class="ct-grid">
+      <div class="ct-cards">
+        <a class="ct rv" href="page.html?id=5-1"><i>🎨</i><h4>브랜드·콘텐츠 협업</h4><p>캐릭터·이모티콘 협업 제안</p></a>
+        <a class="ct rv" href="page.html?id=5-2"><i>📜</i><h4>캐릭터 라이선싱</h4><p>상품·콘텐츠 라이선스 문의</p></a>
+        <a class="ct rv" href="page.html?id=5-3"><i>🎪</i><h4>행사·전시·팝업 제안</h4><p>오프라인 공간·행사 제안</p></a>
+        <a class="ct rv" href="page.html?id=5-4"><i>📰</i><h4>언론 취재·인터뷰</h4><p>취재·인터뷰 요청</p></a>
+        <a class="ct rv" href="page.html?id=5-5"><i>❓</i><h4>자주 묻는 질문</h4><p>배송·교환·수강 FAQ</p></a>
+        <a class="ct rv" href="page.html?id=5-6"><i>🛎️</i><h4>상품·수강 고객지원</h4><p>주문·수강 관련 문의</p></a>
+      </div>
+      <form class="formbox rv" id="quickForm">
+        <h3>간편 문의 남기기</h3><p>남겨주신 내용은 작가에게 바로 전달돼요. <a href="page.html?id=5-7" style="color:var(--green);text-decoration:underline">통합 문의·연락처 5-7</a></p>
+        <div class="msg" id="qMsg"></div>
+        <div class="two"><div class="field"><label for="qn">이름</label><input id="qn" name="name" required></div><div class="field"><label for="qe">이메일</label><input id="qe" name="email" type="email" required></div></div>
+        <div class="field"><label for="qt">문의 종류</label><select id="qt" name="type"><option>브랜드·콘텐츠 협업</option><option>브랜드 이모티콘 제작</option><option>캐릭터 라이선싱</option><option>강연·교육</option><option>행사·전시·팝업</option><option>상품·수강 고객지원</option><option>기타</option></select></div>
+        <div class="field"><label for="qm">내용</label><textarea id="qm" name="message" required></textarea></div>
+        <button class="btn block" type="submit">보내기 💌</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="js/firebase-config.js"></script>
+<script src="js/data.js"></script>
+<script src="js/db.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

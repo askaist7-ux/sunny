@@ -1,0 +1,39 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function isAdmin()  { return signedIn() && exists(/databases/$(database)/documents/admins/$(request.auth.uid)); }
+
+    // 공개 콘텐츠: 누구나 읽기, 관리자만 쓰기
+    match /products/{id}  { allow read: if true; allow write: if isAdmin(); }
+    match /lectures/{id}  { allow read: if true; allow write: if isAdmin(); }
+    match /settings/{id}  { allow read: if true; allow write: if isAdmin(); }
+
+    // 주문: 로그인 회원이 본인 주문만 생성/조회, 상태 변경은 관리자
+    match /orders/{id} {
+      allow create: if signedIn() && request.resource.data.uid == request.auth.uid && request.resource.data.status == '접수';
+      allow read:   if isAdmin() || (signedIn() && resource.data.uid == request.auth.uid);
+      allow update, delete: if isAdmin();
+    }
+
+    // 문의·수강신청: 누구나 접수(길이 제한), 조회/관리는 관리자
+    match /inquiries/{id} {
+      allow create: if request.resource.data.message is string && request.resource.data.message.size() < 5000;
+      allow read, update, delete: if isAdmin();
+    }
+    match /applications/{id} {
+      allow create: if request.resource.data.name is string && request.resource.data.size() < 20;
+      allow read, update, delete: if isAdmin();
+    }
+
+    // 회원 정보: 본인 또는 관리자
+    match /users/{uid} {
+      allow read: if isAdmin() || (signedIn() && request.auth.uid == uid);
+      allow create, update: if signedIn() && request.auth.uid == uid;
+      allow delete: if isAdmin();
+    }
+
+    // 관리자 목록: 본인 여부 확인만 가능, 추가는 Firebase 콘솔에서만
+    match /admins/{uid} { allow read: if signedIn() && request.auth.uid == uid; allow write: if false; }
+  }
+}

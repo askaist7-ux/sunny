@@ -1,0 +1,12 @@
+{
+  "firestore": { "rules": "firestore.rules", "indexes": "firestore.indexes.json" },
+  "storage": { "rules": "storage.rules" },
+  "hosting": {
+    "public": ".",
+    "cleanUrls": true,
+    "ignore": [
+      "firebase.json", "**/.*", "**/node_modules/**", "*.rules", "*.md", ".mcp.json",
+      "굿즈/**", "소스/**", "KakaoTalk_*", "logo.png"
+    ]
+  }
+}
